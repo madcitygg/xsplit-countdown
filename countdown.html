@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="">
+<head>
+    <title>Mad City stream timer</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+
+
+
+
+    <!-- SET COUNTDOWN DURATION HERE -->
+    <!-- SET COUNTDOWN DURATION HERE -->
+    <!-- SET COUNTDOWN DURATION HERE -->
+    <!-- SET COUNTDOWN DURATION HERE -->
+    <!-- SET COUNTDOWN DURATION HERE -->
+    <script type="text/javascript">
+    
+        var countdownMinutes = 20;
+
+    </script>
+
+
+
+
+    <!-- SET TEXT STYLES HERE -->
+    <!-- SET TEXT STYLES HERE -->
+    <!-- SET TEXT STYLES HERE -->
+    <!-- SET TEXT STYLES HERE -->
+    <!-- SET TEXT STYLES HERE -->
+    <style type="text/css">
+        
+        .timer {
+            color: #fff;
+            font-size: 50px;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            text-shadow: 0 0 1px rgba(0, 0, 0, .95);
+        }
+
+    </style>
+
+
+
+
+</head>
+
+
+
+
+
+<!-- NOTHING BELOW HERE NEEDS TO BE EDITED -->
+<!-- NOTHING BELOW HERE NEEDS TO BE EDITED -->
+<!-- NOTHING BELOW HERE NEEDS TO BE EDITED -->
+<!-- NOTHING BELOW HERE NEEDS TO BE EDITED -->
+<!-- NOTHING BELOW HERE NEEDS TO BE EDITED -->
+<!-- NOTHING BELOW HERE NEEDS TO BE EDITED -->
+<!-- NOTHING BELOW HERE NEEDS TO BE EDITED -->
+<!-- NOTHING BELOW HERE NEEDS TO BE EDITED -->
+<!-- NOTHING BELOW HERE NEEDS TO BE EDITED -->
+<!-- NOTHING BELOW HERE NEEDS TO BE EDITED -->
+
+
+
+
+
+<body>
+    <h1 class="timer" id="js-stream-timer">00:00</h1>
+
+<!-- MAIN JS -->
+<script type="text/javascript">
+    // credit to robbmj on stackoverflow
+    // this is almost directly copied from him
+    function start(duration, textElement) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10)
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            textElement.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                timer = duration;
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        var totalMinutes = 60 * countdownMinutes;
+        var textElement = document.querySelector('#js-stream-timer');
+        textElement.textContent = countdownMinutes < 10 ? '0' + countdownMinutes + ':00' : '' + countdownMinutes + ':00'
+
+        start(totalMinutes, textElement);
+    };
+
+</script>
+
+<style type="text/css">
+    
+    html, body { width: 300px; background: none transparent; overflow: hidden; }
+    * { margin: 0; padding: 0; line-height: 1; }
+
+</style>
+</body>
+</html>
