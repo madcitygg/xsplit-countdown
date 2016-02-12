@@ -11,8 +11,8 @@ A tiny, self-contained countdown file to use in Xsplit for stream countdowns.
 7. Blammo, you have a super simple countdown on your stream's scene.
 
 Personally, for broadcast times, I'd recommend copying `countdown.html` a few times, and naming them something like:
-# `countdown-20min.html`
-# `countdown-5min.html`
+* `countdown-20min.html`
+* `countdown-5min.html`
 
 ...et cetera.  Then, just change the duration in each corresponding file.  This way, you can pull up multiple countdowns easily during your broadcast if need be.
 
